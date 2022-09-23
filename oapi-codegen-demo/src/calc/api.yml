@@ -1,0 +1,41 @@
+info:
+  title: Calc API
+  description: A simple API spec for OpenAPI demonstration.
+
+paths:
+  /calc/sum:
+    get:
+      description: Returns the sum of the given numbers.
+      parameters:
+      - name: x
+        in: query
+        required: true
+        schema:
+          type: integer
+      # "y" needs quoting because y is boolean yes in YAML
+      - name: "y"
+        in: query
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: The sum.
+  /calc/diff:
+    get:
+      description: Returns the difference of the given numbers.
+      parameters:
+      - name: x
+        in: query
+        required: true
+        schema:
+          type: integer
+      # "y" needs quoting because y is boolean yes in YAML
+      - name: "y"
+        in: query
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: The difference.

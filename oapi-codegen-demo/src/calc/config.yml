@@ -1,0 +1,6 @@
+# Generated with oapi-codegen --output-config --old-config-style --package=PACKAGE --generate="types,server,spec" api.yml
+package: calc
+generate:
+  chi-server: true
+  models: true
+  embedded-spec: true
