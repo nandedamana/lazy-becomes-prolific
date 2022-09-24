@@ -1,0 +1,19 @@
+# Started by copying the template from
+# https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
+name: test
+on: [push]
+jobs:
+  test-oapi-codegen-demo:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: oapi-codegen-demo
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build and run the containers
+        run: docker compose up -d --build
+      
+      - name: Run the tests
+        run: ./test.sh
