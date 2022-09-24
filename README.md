@@ -1,5 +1,7 @@
 # Code Generation Examples for the Lazy
 
+![build and test](https://github.com/nandedamana/lazy-becomes-prolific/actions/workflows/test.yml/badge.svg)
+
 A repo to host working examples for the use of code generation tools and
 techniques. Started as part of my
 [Open Source India 2022](https://www.opensourceindia.in/)
