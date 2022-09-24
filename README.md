@@ -16,6 +16,6 @@ test automation. Please refer to the individual README files for more info.
 * OpenAPI 3 (tool: [oapi-codegen](https://github.com/deepmap/oapi-codegen))
 * Docker
   - multi-stage builds to reduce container size
-	- `go mod download` to reduce build time
+  - `go mod download` to reduce build time
 * `make`
 * Very basic test automation with `bash`
