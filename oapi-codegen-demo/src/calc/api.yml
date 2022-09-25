@@ -1,6 +1,8 @@
+openapi: 3.0.0
 info:
   title: Calc API
   description: A simple API spec for OpenAPI demonstration.
+  version: "1.0"
 
 paths:
   /calc/sum:
