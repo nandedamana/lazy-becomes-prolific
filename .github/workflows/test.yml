@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Build and run the manual version
-        run: test ! -e manual/calc && make -C manual && manual/calc
+        run: make -C manual clean && test ! -e manual/calc && make -C manual && manual/calc
       
       - name: Build and run the sed-based version
-        run: test ! -e sed/calc && test ! -e sed/opstr.gen.h && make -C sed && test -f sed/opstr.gen.h && sed/calc
+        run: make -C sed clean && test ! -e sed/calc && test ! -e sed/opstr.gen.h && make -C sed && test -f sed/opstr.gen.h && sed/calc
