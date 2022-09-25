@@ -17,3 +17,18 @@ jobs:
       
       - name: Run the tests
         run: ./test.sh
+
+  build-c-enum-stringify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: c-enum-stringify
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build and run the manual version
+        run: test ! -e manual/calc && make -C manual && manual/calc
+      
+      - name: Build and run the sed-based version
+        run: test ! -e sed/calc && test ! -e sed/opstr.gen.h && make -C sed && test -f sed/opstr.gen.h && sed/calc
