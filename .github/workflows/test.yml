@@ -32,3 +32,15 @@ jobs:
       
       - name: Build and run the sed-based version
         run: make -C sed clean && test ! -e sed/calc && test ! -e sed/opstr.gen.h && make -C sed && test -f sed/opstr.gen.h && sed/calc
+
+  test-mkenv:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: mkenv
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run the test
+        run: ./test.sh
