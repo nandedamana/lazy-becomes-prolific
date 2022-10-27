@@ -4,7 +4,7 @@ set -e
 set -o nounset
 
 usage() {
-	>&2 echo "$0" OUTFILE VARNAME1 [ OUTFILE2 VARNAME2 ... ]
+	>&2 echo "$0" OUTFILE1 VARNAME1 [ OUTFILE2 VARNAME2 ... ]
 }
 
 outfiles=()
